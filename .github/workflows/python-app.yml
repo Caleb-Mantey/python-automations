@@ -8,9 +8,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+        python-version: [ "3.12"]
         poetry-version: ["latest", "main", "1.8.4"]
-        os: [ubuntu-22.04, macos-latest, windows-latest]
+        os: [ubuntu-22.04]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -21,5 +21,5 @@ jobs:
         uses: abatilo/actions-poetry@v3
         with:
           poetry-version: ${{ matrix.poetry-version }}
-      - name: View poetry --help
-        run: poetry --help
+      - name: Push to discord
+        run: poetry run python gh_actions_lessoms/main.py
