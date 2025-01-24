@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "gh-actions-lessons"
+version = "0.1.0"
+description = ""
+authors = ["Caleb Mantey <manteycaleb@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+requests = "^2.32.3"
+langchain = "^0.3.15"
+openai = "^1.60.1"
+langchain-openai = "^0.3.2"
+langchain-community = "^0.3.15"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
