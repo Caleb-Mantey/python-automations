@@ -21,5 +21,7 @@ jobs:
         uses: abatilo/actions-poetry@v3
         with:
           poetry-version: ${{ matrix.poetry-version }}
+      - name: Install dependencies
+        run: poetry install
       - name: Push to discord
         run: poetry run pytest
