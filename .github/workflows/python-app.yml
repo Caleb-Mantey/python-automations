@@ -22,4 +22,4 @@ jobs:
         with:
           poetry-version: ${{ matrix.poetry-version }}
       - name: Push to discord
-        run: poetry run python gh_actions_lessoms/main.py
+        run: poetry run pytest
